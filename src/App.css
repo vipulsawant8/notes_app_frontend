@@ -1,0 +1,99 @@
+:root {
+  --bs-primary: #0d6efd;
+}
+
+body{
+  /* background-color: #f1f3f5; */
+  background-color: #F3F4F6;
+  /* background-color: "#F8F9FA"; */
+  color: #212529;
+}
+
+.note-card {
+  background-color: #ffffff;
+  color: #212529;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  margin-top: 15px;
+}
+.note-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.note-card.pinned {
+  background-color: #fff8e1;        /* soft warm highlight */
+  border-left: 4px solid #f0ad4e;   /* Bootstrap warning */
+  color: #f0ad4e;
+}
+
+.note-card.pinned:hover {
+  box-shadow: 0 6px 14px rgba(240, 173, 78, 0.25);
+}
+.note-title {
+  font-weight: 600;
+  color: #212529;
+}
+
+.note-content {
+  color: #495057; /* slightly muted */
+}
+
+.pin-icon {
+  color: #adb5bd;      /* muted */
+  cursor: pointer;
+}
+
+.pin-icon:hover {
+  color: #495057;
+}
+
+.pin-icon.active {
+  color: #f0ad4e;      /* warning / pinned */
+}
+
+.hide-scrollbar {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+.btn-icon{
+  text-decoration: none !important;
+  font-weight: bolder !important;
+}
+
+.x-btn{
+  color: #dc3545 !important;
+}
+
+.edit-btn{
+  color: #0d6efd !important;
+}
+
+.input {
+  border: 1px solid #ccc;
+}
+
+.input.error {
+  border: 1px solid red;
+}
+.mobile-toast {
+  margin: 0;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .mobile-toast {
+    width: auto !important;
+    margin-top: 16px !important;
+    margin-left: 16px !important;
+    margin-bottom: 16px !important;
+  }
+}
