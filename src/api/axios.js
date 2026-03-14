@@ -64,7 +64,7 @@ API.interceptors.response.use(res => {
 		notify.warn("Back-end is down", { position: "top-center", autoClose: 2000, hideProgressBar: true });
 	}
 
-	const skipRefreshUrls = ['/auth/login', '/auth/create-account',  '/auth/verify-email','/auth/refresh-token', '/auth/logout'];
+	const skipRefreshUrls = ['/auth/login', '/auth/create-account',  '/auth/verify-email','/auth/refresh-token', '/auth/logout', '/auth/forgot-password','/auth/reset-password'];
 
 	const isSkipRefresh = skipRefreshUrls.some(url => original.url.includes(url));
 	
