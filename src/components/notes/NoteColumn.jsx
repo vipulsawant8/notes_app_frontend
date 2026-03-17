@@ -1,4 +1,4 @@
-import { useState, useRef, memo } from "react";
+import { useState, useRef, memo, useEffect } from "react";
 import { Button, Card, CardBody } from "react-bootstrap";
 
 import { NoteHeader, NoteEditForm, NoteDeleteModal } from '@/components/notes';
@@ -48,6 +48,15 @@ const NoteColumn = ({ note }) => {
 			notify.error(msg);
 		}
 	};
+	const [tick, setTick] = useState(0);
+
+	useEffect(() => {
+	const interval = setInterval(() => {
+		setTick(t => t + 1);
+	}, 60000); // every 1 minute
+
+	return () => clearInterval(interval);
+	}, []);
 
 	return (
 		
