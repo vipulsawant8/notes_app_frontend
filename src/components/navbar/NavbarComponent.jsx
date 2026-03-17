@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, NavbarBrand, NavDropdown, DropdownItem, Dropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, NavbarBrand, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { LogoutButton } from "@/components/auth";

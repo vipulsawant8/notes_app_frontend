@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useMemo, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, CardGroup } from "react-bootstrap";
 
 import { selectAllNotes, fetchNotes } from "@/app/features/notes/noteSlice.js";
 import { NoteColumn, AddNote } from "@/components/notes/index.js";
@@ -43,13 +43,13 @@ const BoardPage = () => {
 			<Row className="mt-3">
 				
 				<h2 className="mb-4"> Your Board </h2>
-					
-					{notes.map( note => (
-						<Col lg={4} sm={6} xs={12} key={note.title}>
+					<CardGroup>
+						{notes.map( note => (
+						<Col lg={4} sm={6} xs={12} key={note.title} className="d-flex ps-3 mb-3">
 							<NoteColumn note={note} />
-						</Col>
+						 </Col>
 					))}
-
+					</CardGroup>
 			</Row>
 
 			{ loading && <p> Loading your notes..... </p> }

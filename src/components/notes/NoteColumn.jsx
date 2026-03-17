@@ -1,5 +1,5 @@
 import { useState, useRef, memo } from "react";
-import { Button, Card, CardBody, CardHeader } from "react-bootstrap";
+import { Button, Card, CardBody } from "react-bootstrap";
 
 import { NoteHeader, NoteEditForm, NoteDeleteModal } from '@/components/notes';
 import { updatePin } from "@/app/features/notes/noteSlice";
@@ -51,7 +51,7 @@ const NoteColumn = ({ note }) => {
 
 	return (
 		
-		<Card className={`note-card ${ note.pinned ? "pinned" : ""}`}>
+		<Card className={`note-card ${ note.pinned ? "pinned" : ""} w-100 h-100`}>
 			
 			<NoteDeleteModal show={deleting} onHide={onHideDelete} note={note}  />
 
