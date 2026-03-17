@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Card, CardBody, CardTitle, Col, Container, Row, CardHeader, CardFooter } from "react-bootstrap";
+import { Card, CardBody, CardTitle, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 
 import { LoginForm } from "@/components/auth";

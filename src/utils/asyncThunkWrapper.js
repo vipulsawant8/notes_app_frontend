@@ -1,5 +1,3 @@
-import notify from "./notify.js";
-
 const asyncThunkWraper = async (apiCall, thunkAPI) => {
 
 	try {

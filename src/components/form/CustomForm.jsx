@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup/src/yup.js";
 
-import { Form, Button, FormGroup, FormText } from "react-bootstrap";
+import { Form, FormGroup, FormText } from "react-bootstrap";
 
 import { InputCheckbox, InputFile, InputSelect, InputText, InputTextarea, SubmitButton } from "@/components/form";
 

@@ -8,7 +8,7 @@ import { updateNote } from "@/app/features/notes/noteSlice.js";
 
 import notify from "@/utils/notify.js";
 
-const NoteEditForm = forwardRef(({ note, onSave }, ref) => {
+const NoteEditForm = ({ ref, note, onSave }) => {
 
 	const dispatch = useDispatch();
 
@@ -52,6 +52,6 @@ const NoteEditForm = forwardRef(({ note, onSave }, ref) => {
 
 	return ( <CustomForm ref={ref} fields={noteFields} validationSchema={noteSchema} onSubmit={handleSave} onError={handleError} defaultValues={{ title: note.title, content: note.content }} submitLabel="Save" name="EditNote" submitInside={false} />)
 	
-} );
+};
 
 export default NoteEditForm;
