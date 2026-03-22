@@ -45,7 +45,7 @@ const BoardPage = () => {
 				<h2 className="mb-4"> Your Board </h2>
 					<CardGroup>
 						{notes.map( note => (
-						<Col lg={4} sm={6} xs={12} key={note.title} className="d-flex ps-3 mb-3">
+						<Col lg={4} sm={6} xs={12} key={note.title} className="d-flex p-1">
 							<NoteColumn note={note} />
 						 </Col>
 					))}
